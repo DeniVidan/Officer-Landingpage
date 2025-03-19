@@ -70,8 +70,8 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <Link to="/company" className="hover:text-black cursor-pointer">
-                Company
+              <Link to="/contact" className="hover:text-black cursor-pointer">
+                Contact
               </Link>
             </li>
             <li>
@@ -80,8 +80,8 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <Link to="/resources" className="hover:text-black cursor-pointer">
-                Resources
+              <Link to="/features" className="hover:text-black cursor-pointer">
+                Features
               </Link>
             </li>
           </ul>
@@ -138,11 +138,11 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                to="/company"
+                to="/contact"
                 className="hover:text-black cursor-pointer"
                 onClick={() => setIsOpen(false)}
               >
-                Company
+                Contact
               </Link>
             </li>
             <li>
@@ -156,11 +156,11 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                to="/resources"
+                to="/features"
                 className="hover:text-black cursor-pointer"
                 onClick={() => setIsOpen(false)}
               >
-                Resources
+                Features
               </Link>
             </li>
           </ul>

@@ -108,9 +108,9 @@ export default function Home() {
           <img src="hero_line.svg" alt="" />
         </motion.div>
         
-        <h2 className="text-3xl md:text-7xl font-extrabold text-white font-[CreatoDisplayBold]">
+        <h2 className="text-3xl md:text-7xl font-extrabold text-white title-font">
           Improve Your Asset  
-          <br />Management with <span className="text-[#007BCC]">Officer</span>
+          <br />Management with <span className="text-[#007BCC] ">Officer</span>
         </h2>
         <p className="mt-4 text-gray-400 max-w-2xl mx-auto font-[CreatoDisplayRegular]">
         Simplify your business's asset management with our easy-to-use, scalable SaaS platform. Built for all around the world companies, our tools make complex processes simple.
