@@ -42,10 +42,11 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen w-screen">
-            {/* Decorative Elements */}
-            <div className="fixed top-44 right-0 w-[800px] h-[300px] bg-[#00509D]/30 rounded-bl-[40%] rounded-tl-[60%] rounded-br-[30%] blur-3xl pointer-events-none transform -rotate-6 z-0"></div>
-      <div className="fixed bottom-0 left-0 w-[300px] h-[300px] bg-white/5 rounded-tr-full blur-3xl pointer-events-none"></div>
+    <div className="min-h-screen w-screen relative">
+      {/* Decorative Elements - Moved to the top and set z-index to -1 */}
+      <div className="fixed top-44 right-0 w-[800px] h-[300px] bg-[#00509D]/30 rounded-bl-[40%] rounded-tl-[60%] rounded-br-[30%] blur-3xl pointer-events-none transform -rotate-6 z-[-1]"></div>
+      <div className="fixed bottom-0 left-0 w-[300px] h-[300px] bg-white/5 rounded-tr-full blur-3xl pointer-events-none z-[-1]"></div>
+      
       {/* Hero Section */}
       <section className="relative pt-10 pb-2">
         <div className="container mx-auto px-4 max-w-6xl">

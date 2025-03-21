@@ -82,10 +82,11 @@ export default function FeaturesPage() {
   };
 
   return (
-    <div className="min-h-screen">
-            {/* Decorative Elements */}
-            <div className="fixed top-44 right-0 w-[800px] h-[300px] bg-[#00509D]/30 rounded-bl-[40%] rounded-tl-[60%] rounded-br-[30%] blur-3xl pointer-events-none transform -rotate-6 z-0"></div>
-      <div className="fixed bottom-0 left-0 w-[300px] h-[300px] bg-white/5 rounded-tr-full blur-3xl pointer-events-none z-0"></div>
+    <div className="min-h-screen relative">
+      {/* Decorative Elements - Moved to the beginning and set z-index to make them behind content */}
+      <div className="fixed top-44 right-0 w-[800px] h-[300px] bg-[#00509D]/30 rounded-bl-[40%] rounded-tl-[60%] rounded-br-[30%] blur-3xl pointer-events-none transform -rotate-6 z-[-1]"></div>
+      <div className="fixed bottom-0 left-0 w-[300px] h-[300px] bg-white/5 rounded-tr-full blur-3xl pointer-events-none z-[-1]"></div>
+      
       {/* Hero Section */}
       <section className="relative py-20">
         <div className="container mx-auto px-4 max-w-6xl">
@@ -113,27 +114,27 @@ export default function FeaturesPage() {
       </section>
 
       {/* Key Features Overview */}
-      <section className="py-10 mb-30 text-center border-1 border-[#00509D] rounded-3xl mx-5">
-      <p className="text-blue-400 font-semibold mb-2 uppercase tracking-wider">KEY FEATURES</p>
-      <h2 className="title-font text-3xl font-bold text-white mb-4">Powerful Asset Management</h2>
-      <p className="text-gray-300 max-w-3xl mx-auto mb-10 px-6">
-        Our enterprise-grade asset management platform provides everything you need to optimize your asset lifecycle, from acquisition to retirement.
-      </p>
+      <section className="py-10 mb-30 text-center border-1 border-[#00509D] rounded-3xl mx-5 relative z-[1]">
+        <p className="text-blue-400 font-semibold mb-2 uppercase tracking-wider">KEY FEATURES</p>
+        <h2 className="title-font text-3xl font-bold text-white mb-4">Powerful Asset Management</h2>
+        <p className="text-gray-300 max-w-3xl mx-auto mb-10 px-6">
+          Our enterprise-grade asset management platform provides everything you need to optimize your asset lifecycle, from acquisition to retirement.
+        </p>
 
-      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-6">
-        {features.map((feature, i) => (
-          <div key={i} className="p-6 bg-white/3 hover:bg-transparent border-1 border-transparent hover:border-1 hover:border-white/7 rounded-xl shadow-md transition-all duration-300">
-            <div className="flex items-center justify-center text-blue-300 mb-4">{feature.icon}</div>
-            <h3 className="text-lg font-semibold text-white">{feature.title}</h3>
-            <p className="text-gray-100 mt-2">{feature.desc}</p>
-            {i < features.length - 1 && <ChevronRight size={24} className="text-gray-100 mt-4 mx-auto hidden md:block" />}
-          </div>
-        ))}
-      </div>
-    </section>
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-6">
+          {features.map((feature, i) => (
+            <div key={i} className="p-6 bg-white/3 hover:bg-transparent border-1 border-transparent hover:border-1 hover:border-white/7 rounded-xl shadow-md transition-all duration-300">
+              <div className="flex items-center justify-center text-blue-300 mb-4">{feature.icon}</div>
+              <h3 className="text-lg font-semibold text-white">{feature.title}</h3>
+              <p className="text-gray-100 mt-2">{feature.desc}</p>
+              {i < features.length - 1 && <ChevronRight size={24} className="text-gray-100 mt-4 mx-auto hidden md:block" />}
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* Detailed Feature Tabs */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 relative z-[1]">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="title-font text-3xl font-bold text-gray-800 mb-4">Explore Our Features</h2>
@@ -191,7 +192,7 @@ export default function FeaturesPage() {
       </section>
 
       {/* Use Cases */}
-      <section className="py-20">
+      <section className="py-20 relative z-[1]">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="title-font text-3xl font-bold text-gray-200 mb-4">Use Cases</h2>
@@ -266,8 +267,7 @@ export default function FeaturesPage() {
       </section>
 
       {/* Comparison Table */}
-      <section className="py-20 bg-gray-50">
-        
+      <section className="py-20 bg-gray-50 relative z-[1]">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="title-font text-3xl font-bold text-gray-800 mb-4">How We Compare</h2>
@@ -340,7 +340,7 @@ export default function FeaturesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-[#003466]">
+      <section className="py-20 bg-[#003466] relative z-[1]">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h2 className="title-font text-3xl font-bold text-white mb-6">Ready to streamline your asset management?</h2>
           <p className="text-font text-lg text-blue-100 mb-10">

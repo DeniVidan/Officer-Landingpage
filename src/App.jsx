@@ -7,7 +7,7 @@ import Company from "./pages/Company";
 import Resources from "./pages/Resources";
 import ContactPage from "./pages/Contact";
 import FeaturesPage from "./pages/Features";
-
+import Pricing from "./pages/Pricing"
 
 function App() {
   return (
