@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-transparent w-[100vw] overflow-x-hidden">
       {/* Decorative Elements */}
-      <div className="fixed top-44 right-0 w-[800px] h-[300px] bg-[#00509D]/30 rounded-bl-[40%] rounded-tl-[60%] rounded-br-[30%] blur-3xl pointer-events-none transform -rotate-6 z-10"></div>
+      <div className="fixed top-44 right-0 w-[800px] h-[300px] bg-[#00509D]/30 rounded-bl-[40%] rounded-tl-[60%] rounded-br-[30%] blur-3xl pointer-events-none transform -rotate-6 z-0"></div>
       <div className="fixed bottom-0 left-0 w-[300px] h-[300px] bg-white/5 rounded-tr-full blur-3xl pointer-events-none"></div>
 
       {/* Hero Section */}

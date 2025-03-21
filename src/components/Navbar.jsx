@@ -54,7 +54,7 @@ export default function Navbar() {
                 className="w-full h-full object-contain"
               />
             </div>
-            <h1 className="text-lg font-semibold text-white">Officer</h1>
+            <h1 className={`text-lg font-semibold ${isScrolled && window.innerWidth < 640 ? "text-black" : "text-white"}`}>Officer</h1>
           </div>
 
           {/* Desktop Navigation */}
@@ -65,8 +65,8 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <Link to="/service" className="hover:text-black cursor-pointer">
-                Service
+              <Link to="/pricing" className="hover:text-black cursor-pointer">
+                Pricing
               </Link>
             </li>
             <li>
@@ -76,7 +76,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link to="/about-us" className="hover:text-black cursor-pointer">
-                About us
+                Company
               </Link>
             </li>
             <li>
@@ -129,11 +129,11 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                to="/service"
+                to="/pricing"
                 className="hover:text-white cursor-pointer"
                 onClick={() => setIsOpen(false)}
               >
-                Service
+                Pricing
               </Link>
             </li>
             <li>
@@ -151,7 +151,7 @@ export default function Navbar() {
                 className="hover:text-black cursor-pointer"
                 onClick={() => setIsOpen(false)}
               >
-                About us
+                Company
               </Link>
             </li>
             <li>

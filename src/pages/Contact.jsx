@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Footer from '../components/Footer';
+import Faq from '../components/FAQ';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -41,15 +42,18 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen w-screen">
+            {/* Decorative Elements */}
+            <div className="fixed top-44 right-0 w-[800px] h-[300px] bg-[#00509D]/30 rounded-bl-[40%] rounded-tl-[60%] rounded-br-[30%] blur-3xl pointer-events-none transform -rotate-6 z-0"></div>
+      <div className="fixed bottom-0 left-0 w-[300px] h-[300px] bg-white/5 rounded-tr-full blur-3xl pointer-events-none"></div>
       {/* Hero Section */}
-      <section className="relative py-20 bg-gray-50">
+      <section className="relative pt-10 pb-2">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center max-w-2xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 title-font">
               Get in Touch
             </h1>
-            <p className="text-lg text-gray-600">
+            <p className="text-gray-300 text-font">
               Have questions about our asset management platform? We're here to help you streamline your operations.
             </p>
           </div>
@@ -59,16 +63,16 @@ export default function ContactPage() {
       {/* Contact Form and Info Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 max-w-6xl">
-          <div className="flex flex-col lg:flex-row gap-12">
+          <div className="flex flex-col lg:flex-row gap-8 md:gap-12">
             {/* Contact Form */}
-            <div className="lg:w-2/3 bg-white rounded-lg shadow-lg overflow-hidden">
+            <div className="lg:w-2/3 bg-gradient-to-b from-white/10 to-white/5 rounded-lg shadow-lg overflow-hidden">
               <div className="p-8 md:p-12">
-                <h2 className="text-2xl font-bold text-gray-800 mb-6">Send us a message</h2>
+                <h2 className="text-2xl font-bold text-gray-200 mb-6 title-font">Send us a message</h2>
                 
                 {formStatus.submitted ? (
                   <div className="bg-green-50 border border-green-200 text-green-700 p-6 rounded-lg">
-                    <h3 className="text-xl font-semibold mb-2">Thank you for reaching out!</h3>
-                    <p>Your message has been received. Our team will get back to you within 24 hours.</p>
+                    <h3 className="text-xl font-semibold mb-2 title-font">Thank you for reaching out!</h3>
+                    <p className="text-font">Your message has been received. Our team will get back to you within 24 hours.</p>
                     <button 
                       onClick={() => setFormStatus({ submitted: false, error: false })}
                       className="mt-4 text-green-700 underline hover:text-green-800"
@@ -80,7 +84,7 @@ export default function ContactPage() {
                   <form onSubmit={handleSubmit}>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                       <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                        <label htmlFor="name" className="block text-sm font-medium text-gray-500 mb-2">
                           Full Name
                         </label>
                         <input
@@ -95,7 +99,7 @@ export default function ContactPage() {
                         />
                       </div>
                       <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                        <label htmlFor="email" className="block text-sm font-medium text-gray-500 mb-2">
                           Email Address
                         </label>
                         <input
@@ -111,7 +115,7 @@ export default function ContactPage() {
                       </div>
                     </div>
                     <div className="mb-6">
-                      <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="company" className="block text-sm font-medium text-gray-500 mb-2">
                         Company Name
                       </label>
                       <input
@@ -125,7 +129,7 @@ export default function ContactPage() {
                       />
                     </div>
                     <div className="mb-6">
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="message" className="block text-sm font-medium text-gray-500 mb-2">
                         Message
                       </label>
                       <textarea
@@ -152,8 +156,8 @@ export default function ContactPage() {
 
             {/* Contact Info */}
             <div className="lg:w-1/3">
-              <div className="bg-gray-50 p-8 rounded-lg shadow-md mb-8">
-                <h3 className="text-xl font-semibold text-gray-800 mb-6">Contact Information</h3>
+              <div className="bg-gradient-to-b from-white/10 to-white/5 p-8 rounded-lg shadow-md mb-8">
+                <h3 className="text-xl font-semibold text-gray-200 mb-6 title-font">Contact Information</h3>
                 <div className="space-y-6">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 mt-1">
@@ -162,8 +166,8 @@ export default function ContactPage() {
                       </svg>
                     </div>
                     <div className="ml-4">
-                      <h4 className="text-md font-medium text-gray-800">Phone</h4>
-                      <p className="text-gray-600">+1 (555) 123-4567</p>
+                      <h4 className="text-md font-medium text-gray-200 title-font">Phone</h4>
+                      <p className="text-gray-500 text-font">+1 (555) 123-4567</p>
                     </div>
                   </div>
                   <div className="flex items-start">
@@ -173,8 +177,8 @@ export default function ContactPage() {
                       </svg>
                     </div>
                     <div className="ml-4">
-                      <h4 className="text-md font-medium text-gray-800">Email</h4>
-                      <p className="text-gray-600">info@assetflow.com</p>
+                      <h4 className="text-md font-medium text-gray-200 title-font">Email</h4>
+                      <p className="text-gray-500 text-font">info@assetflow.com</p>
                     </div>
                   </div>
                   <div className="flex items-start">
@@ -185,8 +189,8 @@ export default function ContactPage() {
                       </svg>
                     </div>
                     <div className="ml-4">
-                      <h4 className="text-md font-medium text-gray-800">Address</h4>
-                      <p className="text-gray-600">
+                      <h4 className="text-md font-medium text-gray-200 title-font">Address</h4>
+                      <p className="text-gray-500 text-font">
                         123 Tech Boulevard<br />
                         Suite 400<br />
                         San Francisco, CA 94105
@@ -196,20 +200,20 @@ export default function ContactPage() {
                 </div>
               </div>
               
-              <div className="bg-gray-50 p-8 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold text-gray-800 mb-6">Business Hours</h3>
+              <div className="bg-gradient-to-b from-white/10 to-white/5 p-8 rounded-lg shadow-md">
+                <h3 className="text-xl font-semibold text-gray-200 mb-6 title-font">Business Hours</h3>
                 <ul className="space-y-3">
                   <li className="flex justify-between">
-                    <span className="text-gray-600">Monday - Friday</span>
-                    <span className="font-medium text-gray-800">9:00 AM - 6:00 PM</span>
+                    <span className="text-gray-500 text-font">Monday - Friday</span>
+                    <span className="font-medium text-gray-200 title-font">9:00 AM - 6:00 PM</span>
                   </li>
                   <li className="flex justify-between">
-                    <span className="text-gray-600">Saturday</span>
-                    <span className="font-medium text-gray-800">10:00 AM - 4:00 PM</span>
+                    <span className="text-gray-500 text-font">Saturday</span>
+                    <span className="font-medium text-gray-200 title-font">10:00 AM - 4:00 PM</span>
                   </li>
                   <li className="flex justify-between">
-                    <span className="text-gray-600">Sunday</span>
-                    <span className="font-medium text-gray-800">Closed</span>
+                    <span className="text-gray-500 text-font">Sunday</span>
+                    <span className="font-medium text-gray-200 title-font">Closed</span>
                   </li>
                 </ul>
               </div>
@@ -219,57 +223,42 @@ export default function ContactPage() {
       </section>
 
       {/* Map Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="rounded-lg overflow-hidden shadow-lg">
-            <img 
-              src="/api/placeholder/1200/400" 
-              alt="Office Location Map" 
-              className="w-full h-80 object-cover"
-            />
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509198!2d144.9537353153163!3d-37.81627997975157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11f3b3%3A0x5045675218ceed30!2sRandom%20Location!5e0!3m2!1sen!2sus!4v1633031234567!5m2!1sen!2sus" 
+              width="100%" 
+              height="500" 
+              style={{ border: 0 }} 
+              allowFullScreen="" 
+              loading="lazy"
+              title="Random Location Map"
+            ></iframe>
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
-            <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
-          </div>
-          <div className="space-y-6">
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">How quickly can we implement your asset management solution?</h3>
-              <p className="text-gray-600">Most clients are fully onboarded within 2-4 weeks, depending on the complexity of your asset portfolio and integration requirements.</p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">Do you offer custom integrations with existing systems?</h3>
-              <p className="text-gray-600">Yes, our platform is designed to integrate seamlessly with most ERP, accounting, and inventory management systems. Our team will work with you to ensure smooth data flow between all your business tools.</p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">What security measures do you have in place?</h3>
-              <p className="text-gray-600">We employ enterprise-grade security including SOC 2 compliance, end-to-end encryption, regular penetration testing, and multi-factor authentication to ensure your asset data remains secure.</p>
-            </div>
-          </div>
-        </div>
+      <section className="mb-5 md:mb-0">
+        <Faq />
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-16 bg-blue-600">
+      <section className="py-16 bg-[#003466]">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">Stay Updated</h2>
-            <p className="text-xl text-blue-100 mb-8">
+            <h2 className="text-3xl font-bold text-white mb-6 title-font">Stay Updated</h2>
+            <p className="text-font text-blue-100 mb-8">
               Subscribe to our newsletter for the latest product updates, industry insights, and asset management best practices.
             </p>
             <div className="flex flex-col sm:flex-row gap-2">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-grow px-4 py-3 rounded-lg outline-none focus:ring-2 focus:ring-blue-300"
+                className="flex-grow px-4 py-3 border-b border-blue-500 outline-none focus:ring-2 focus:ring-blue-300 "
               />
-              <button className="bg-blue-800 hover:bg-blue-900 text-white font-medium py-3 px-6 rounded-lg transition duration-300">
+              <button className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-6 rounded-lg transition duration-300">
                 Subscribe
               </button>
             </div>
@@ -280,4 +269,3 @@ export default function ContactPage() {
     </div>
   );
 };
-

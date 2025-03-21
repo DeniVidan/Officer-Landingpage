@@ -25,7 +25,7 @@ export default function Faq() {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section className="relative py-24 text-white text-center mx-2 md:mx-10 rounded-3xl overflow-hidden">
+    <section className="relative py-24 text-white text-center mx-2 md:mx-0 rounded-3xl overflow-hidden">
       {/* Background image with proper gradient mask */}
       <div className="absolute inset-0 w-full h-full">
         <div className="absolute inset-0 w-full h-full">

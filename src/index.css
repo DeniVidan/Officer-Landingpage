@@ -20,6 +20,8 @@ a {
   font-weight: 500;
   color: rgb(216, 216, 216);
   text-decoration: inherit;
+  width: 100%;
+  display: flex;
 }
 a:hover {
   color: #007BCC;

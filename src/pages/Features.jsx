@@ -1,9 +1,31 @@
 import React, { useState } from 'react';
 import Footer from '../components/Footer';
+import { Clipboard, BarChart2, ShieldCheck, Puzzle, ChevronRight } from "lucide-react";
 
 export default function FeaturesPage() {
   const [activeTab, setActiveTab] = useState('assetTracking');
-  
+  const features = [
+    { 
+      icon: <Clipboard size={30} />, 
+      title: "Asset Tracking", 
+      desc: "Track every asset with precision using barcodes, QR codes, RFID, and GPS location data." 
+    },
+    { 
+      icon: <BarChart2 size={30} />, 
+      title: "Advanced Analytics", 
+      desc: "Transform data into actionable insights with customizable reports and interactive dashboards." 
+    },
+    { 
+      icon: <ShieldCheck size={30} />, 
+      title: "Enterprise Security", 
+      desc: "Bank-grade security with role-based access control, encryption, and comprehensive audit logs." 
+    },
+    { 
+      icon: <Puzzle size={30} />, 
+      title: "Seamless Integration", 
+      desc: "Connect with your existing business systems through our comprehensive API and pre-built connectors." 
+    },
+  ];
   const tabContent = {
     assetTracking: {
       title: "Asset Tracking & Management",
@@ -61,15 +83,18 @@ export default function FeaturesPage() {
 
   return (
     <div className="min-h-screen">
+            {/* Decorative Elements */}
+            <div className="fixed top-44 right-0 w-[800px] h-[300px] bg-[#00509D]/30 rounded-bl-[40%] rounded-tl-[60%] rounded-br-[30%] blur-3xl pointer-events-none transform -rotate-6 z-0"></div>
+      <div className="fixed bottom-0 left-0 w-[300px] h-[300px] bg-white/5 rounded-tr-full blur-3xl pointer-events-none z-0"></div>
       {/* Hero Section */}
-      <section className="relative py-20 bg-gray-50">
+      <section className="relative py-20">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-10 md:mb-0">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+              <h1 className="title-font text-4xl md:text-5xl font-bold text-gray-200 mb-6">
                 Powerful Features for Modern Asset Management
               </h1>
-              <p className="text-lg text-gray-600 mb-8">
+              <p className="text-font text-gray-400 mb-8">
                 Our comprehensive platform gives you the tools to track, manage, and optimize your company's assets with precision and ease.
               </p>
               <button className="bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-lg font-medium transition duration-300">
@@ -88,73 +113,30 @@ export default function FeaturesPage() {
       </section>
 
       {/* Key Features Overview */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">Key Features</h2>
-            <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Our enterprise-grade asset management platform provides everything you need to optimize your asset lifecycle, from acquisition to retirement.
-            </p>
+      <section className="py-10 mb-30 text-center border-1 border-[#00509D] rounded-3xl mx-5">
+      <p className="text-blue-400 font-semibold mb-2 uppercase tracking-wider">KEY FEATURES</p>
+      <h2 className="title-font text-3xl font-bold text-white mb-4">Powerful Asset Management</h2>
+      <p className="text-gray-300 max-w-3xl mx-auto mb-10 px-6">
+        Our enterprise-grade asset management platform provides everything you need to optimize your asset lifecycle, from acquisition to retirement.
+      </p>
+
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-6">
+        {features.map((feature, i) => (
+          <div key={i} className="p-6 bg-white/3 hover:bg-transparent border-1 border-transparent hover:border-1 hover:border-white/7 rounded-xl shadow-md transition-all duration-300">
+            <div className="flex items-center justify-center text-blue-300 mb-4">{feature.icon}</div>
+            <h3 className="text-lg font-semibold text-white">{feature.title}</h3>
+            <p className="text-gray-100 mt-2">{feature.desc}</p>
+            {i < features.length - 1 && <ChevronRight size={24} className="text-gray-100 mt-4 mx-auto hidden md:block" />}
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            <div className="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-4 text-gray-800">Asset Tracking</h3>
-              <p className="text-gray-600">
-                Track every asset with precision using barcodes, QR codes, RFID, and GPS location data.
-              </p>
-            </div>
-            
-            <div className="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-4 text-gray-800">Advanced Analytics</h3>
-              <p className="text-gray-600">
-                Transform data into actionable insights with customizable reports and interactive dashboards.
-              </p>
-            </div>
-            
-            <div className="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-4 text-gray-800">Enterprise Security</h3>
-              <p className="text-gray-600">
-                Bank-grade security with role-based access control, encryption, and comprehensive audit logs.
-              </p>
-            </div>
-            
-            <div className="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-4 text-gray-800">Seamless Integration</h3>
-              <p className="text-gray-600">
-                Connect with your existing business systems through our comprehensive API and pre-built connectors.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </section>
 
       {/* Detailed Feature Tabs */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">Explore Our Features</h2>
+            <h2 className="title-font text-3xl font-bold text-gray-800 mb-4">Explore Our Features</h2>
             <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
           </div>
           
@@ -179,10 +161,10 @@ export default function FeaturesPage() {
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/2 p-8 md:p-12">
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">
+                <h3 className="title-font text-2xl font-bold text-gray-800 mb-4">
                   {tabContent[activeTab].title}
                 </h3>
-                <p className="text-lg text-gray-600 mb-6">
+                <p className="text-font text-gray-600 mb-6">
                   {tabContent[activeTab].description}
                 </p>
                 <ul className="space-y-3">
@@ -212,23 +194,23 @@ export default function FeaturesPage() {
       <section className="py-20">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">Use Cases</h2>
+            <h2 className="title-font text-3xl font-bold text-gray-200 mb-4">Use Cases</h2>
             <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-font text-gray-400 max-w-3xl mx-auto">
               See how companies across industries are using our platform to transform their asset management.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+            <div className="bg-white/3 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
               <img
                 src="https://picsum.photos/400/200"
                 alt="Manufacturing Use Case"
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Manufacturing</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="title-font text-xl font-semibold text-gray-200 mb-3">Manufacturing</h3>
+                <p className="text-font text-gray-400 mb-4">
                   Track equipment performance, schedule preventive maintenance, and maximize production uptime with real-time insights.
                 </p>
                 <a href="#" className="text-blue-600 font-medium hover:text-blue-800 flex items-center">
@@ -240,15 +222,15 @@ export default function FeaturesPage() {
               </div>
             </div>
             
-            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+            <div className="bg-white/3 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
               <img
                 src="https://picsum.photos/400/200"
                 alt="Healthcare Use Case"
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Healthcare</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="title-font text-xl font-semibold text-gray-200 mb-3">Healthcare</h3>
+                <p className="text-font text-gray-400 mb-4">
                   Ensure compliance with regulatory requirements while managing medical equipment, devices, and IT assets across facilities.
                 </p>
                 <a href="#" className="text-blue-600 font-medium hover:text-blue-800 flex items-center">
@@ -260,15 +242,15 @@ export default function FeaturesPage() {
               </div>
             </div>
             
-            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+            <div className="bg-white/3 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
               <img
                 src="https://picsum.photos/400/200"
                 alt="IT Department Use Case"
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">IT & Technology</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="title-font text-xl font-semibold text-gray-200 mb-3">IT & Technology</h3>
+                <p className="text-font text-gray-400 mb-4">
                   Manage hardware, software licenses, and digital assets with automated lifecycle tracking and compliance reporting.
                 </p>
                 <a href="#" className="text-blue-600 font-medium hover:text-blue-800 flex items-center">
@@ -285,11 +267,12 @@ export default function FeaturesPage() {
 
       {/* Comparison Table */}
       <section className="py-20 bg-gray-50">
+        
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">How We Compare</h2>
+            <h2 className="title-font text-3xl font-bold text-gray-800 mb-4">How We Compare</h2>
             <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-font text-gray-600 max-w-3xl mx-auto">
               See how our comprehensive asset management solution stacks up against traditional approaches.
             </p>
           </div>
@@ -317,18 +300,18 @@ export default function FeaturesPage() {
                     </svg>
                   </td>
                 </tr>
-                <tr className="border-b border-gray-200">
-                  <td className="px-6 py-4 font-medium text-gray-800">Mobile Access</td>
-                  <td className="px-6 py-4 text-center">Limited</td>
-                  <td className="px-6 py-4 text-center bg-blue-50">Full Capability</td>
+                <tr className="border-b border-gray-200 text-gray-800">
+                  <td className="px-6 py-4 font-medium">Mobile Access</td>
+                  <td className="px-6 py-4 text-center opacity-65">Limited</td>
+                  <td className="px-6 py-4 text-center bg-blue-50 opacity-65">Full Capability</td>
                 </tr>
-                <tr className="border-b border-gray-200">
-                  <td className="px-6 py-4 font-medium text-gray-800">API Integration</td>
-                  <td className="px-6 py-4 text-center">Basic</td>
-                  <td className="px-6 py-4 text-center bg-blue-50">Advanced</td>
+                <tr className="border-b border-gray-200 text-gray-800">
+                  <td className="px-6 py-4 font-medium ">API Integration</td>
+                  <td className="px-6 py-4 text-center opacity-65">Basic</td>
+                  <td className="px-6 py-4 text-center bg-blue-50 opacity-65">Advanced</td>
                 </tr>
-                <tr className="border-b border-gray-200">
-                  <td className="px-6 py-4 font-medium text-gray-800">Predictive Analytics</td>
+                <tr className="border-b border-gray-200 text-gray-800">
+                  <td className="px-6 py-4 font-medium">Predictive Analytics</td>
                   <td className="px-6 py-4 text-center">
                     <svg className="h-6 w-6 text-red-500 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
@@ -340,15 +323,15 @@ export default function FeaturesPage() {
                     </svg>
                   </td>
                 </tr>
-                <tr className="border-b border-gray-200">
-                  <td className="px-6 py-4 font-medium text-gray-800">Setup Time</td>
-                  <td className="px-6 py-4 text-center">Weeks/Months</td>
-                  <td className="px-6 py-4 text-center bg-blue-50">Days</td>
+                <tr className="border-b border-gray-200 text-gray-800">
+                  <td className="px-6 py-4 font-medium">Setup Time</td>
+                  <td className="px-6 py-4 text-center opacity-65">Weeks/Months</td>
+                  <td className="px-6 py-4 text-center bg-blue-50 opacity-65">Days</td>
                 </tr>
-                <tr>
-                  <td className="px-6 py-4 font-medium text-gray-800">Cost Efficiency</td>
-                  <td className="px-6 py-4 text-center">Variable</td>
-                  <td className="px-6 py-4 text-center bg-blue-50">Predictable</td>
+                <tr className='text-gray-800'>
+                  <td className="px-6 py-4 font-medium">Cost Efficiency</td>
+                  <td className="px-6 py-4 text-center opacity-65">Variable</td>
+                  <td className="px-6 py-4 text-center bg-blue-50 opacity-65">Predictable</td>
                 </tr>
               </tbody>
             </table>
@@ -357,10 +340,10 @@ export default function FeaturesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600">
+      <section className="py-20 bg-[#003466]">
         <div className="container mx-auto px-4 max-w-4xl text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">Ready to streamline your asset management?</h2>
-          <p className="text-xl text-blue-100 mb-10">
+          <h2 className="title-font text-3xl font-bold text-white mb-6">Ready to streamline your asset management?</h2>
+          <p className="text-font text-lg text-blue-100 mb-10">
             Join hundreds of companies that have transformed their asset management with our platform.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
