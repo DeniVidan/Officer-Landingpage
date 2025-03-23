@@ -14,11 +14,11 @@ export default function Test() {
 
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-6">
         {steps.map((step, i) => (
-          <div key={i} className="p-6 bg-white/3 hover:bg-transparent border-1 border-transparent hover:border-1 hover:border-white/7 rounded-xl shadow-md transition-all duration-300">
+          <div key={i} className="p-6 bg-white/3 hover:bg-transparent border-1 border-transparent hover:border-1 hover:border-white/7 rounded-xl shadow-md transition-all duration-300 cursor-pointer">
             <div className="flex items-center justify-center text-blue-300 mb-4">{step.icon}</div>
             <h3 className="text-lg font-semibold text-white">{step.title}</h3>
             <p className="text-gray-100 mt-2">{step.desc}</p>
-            {i < steps.length - 1 && <ArrowRight size={24} className="text-gray-100 mt-4 mx-auto hidden md:block" />}
+            {i === 0 && <ArrowRight size={24} className="text-gray-100 mt-4 mx-auto hidden md:block" />}
           </div>
         ))}
       </div>

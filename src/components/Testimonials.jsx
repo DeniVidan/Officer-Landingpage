@@ -73,7 +73,7 @@ export default function Testimonials() {
           <h2 className="text-3xl md:text-5xl font-extrabold mb-6 title-font">
             What Our Users Say
           </h2>
-          <p className="max-w-2xl mx-auto text-gray-300">
+          <p className="max-w-2xl mx-auto text-gray-300 text-font">
             Don't just take our word for it. See what our customers have achieved with our platform.
           </p>
         </div>
@@ -111,7 +111,7 @@ export default function Testimonials() {
           >
             {testimonials.map((user, i) => (
               <SwiperSlide key={i} className="max-w-lg">
-                <div className="p-8 bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-700/50 transition-all duration-300 hover:shadow-blue-900/20 hover:border-blue-500/30">
+                <div className="cursor-grab p-8 bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-700/50 transition-all duration-300 hover:shadow-blue-900/20 hover:border-blue-500/30">
                   <div className="flex items-center mb-6">
                     <div className="flex-shrink-0">
                       <img 
@@ -155,7 +155,7 @@ export default function Testimonials() {
 
         {/* CTA Section */}
         <div className="mt-16 text-center">
-          <p className="text-gray-300 mb-6">Join thousands of satisfied customers today</p>
+          <p className="text-gray-300 mb-6 text-font">Join thousands of satisfied customers today</p>
           <button className="px-8 py-4 bg-white text-black font-bold rounded-full shadow-lg hover:shadow-blue-700/40 transition-all duration-300 hover:translate-y-1">
             Start Your Free Trial
           </button>

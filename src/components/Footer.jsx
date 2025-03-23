@@ -15,7 +15,7 @@ const Footer = () => {
               <span className="text-2xl font-bold text-white">OFFICER</span>
               <span className="ml-1 bg-blue-500 h-2 w-2 rounded-full"></span>
             </div>
-            <p className="text-slate-400 text-sm">
+            <p className="text-slate-400 text-sm text-font">
               Streamlining asset management with powerful tools and solutions for modern enterprises.
             </p>
             <div className="flex space-x-4 pt-2">
@@ -88,7 +88,7 @@ const Footer = () => {
         <div className="border-t border-slate-800 my-8"></div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
+        <div className="flex flex-col md:flex-row justify-between items-center text-sm text-slate-500 text-font">
           <div className="mb-4 md:mb-0">
             <p>&copy; {currentYear} Officer Company. All rights reserved.</p>
           </div>

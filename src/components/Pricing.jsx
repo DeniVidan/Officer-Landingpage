@@ -129,7 +129,7 @@ const Pricing = () => {
         </div>
         
         <div className="text-center mt-16">
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-400 max-w-2xl mx-auto tex-font">
             Questions about our plans? <span className="text-blue-400 underline cursor-pointer">Contact our sales team</span> to find the perfect solution for your business.
           </p>
         </div>

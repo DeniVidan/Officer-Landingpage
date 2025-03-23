@@ -127,7 +127,7 @@ export default function FeaturesPage() {
               <div className="flex items-center justify-center text-blue-300 mb-4">{feature.icon}</div>
               <h3 className="text-lg font-semibold text-white">{feature.title}</h3>
               <p className="text-gray-100 mt-2">{feature.desc}</p>
-              {i < features.length - 1 && <ChevronRight size={24} className="text-gray-100 mt-4 mx-auto hidden md:block" />}
+              
             </div>
           ))}
         </div>
@@ -267,7 +267,7 @@ export default function FeaturesPage() {
       </section>
 
       {/* Comparison Table */}
-      <section className="py-20 bg-gray-50 relative z-[1]">
+      <section className="py-20 bg-gray-50 relative z-[1] w-screen">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="title-font text-3xl font-bold text-gray-800 mb-4">How We Compare</h2>
@@ -343,7 +343,7 @@ export default function FeaturesPage() {
       <section className="py-20 bg-[#003466] relative z-[1]">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h2 className="title-font text-3xl font-bold text-white mb-6">Ready to streamline your asset management?</h2>
-          <p className="text-font text-lg text-blue-100 mb-10">
+          <p className="text-font text-blue-100 mb-10">
             Join hundreds of companies that have transformed their asset management with our platform.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

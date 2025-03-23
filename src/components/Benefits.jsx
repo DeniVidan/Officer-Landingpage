@@ -22,7 +22,7 @@ export default function Benefits() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6l6 6-6 6" />
           </svg>
         </button>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto px-6 text-start font-[CreatoDisplayRegular]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto px-6 text-start font-[CreatoDisplayRegular] cursor-pointer">
         {features.map((item, i) => (
           <motion.div
             key={i}
