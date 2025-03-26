@@ -10,6 +10,8 @@ import Resources from "./pages/Resources";
 import ContactPage from "./pages/Contact";
 import FeaturesPage from "./pages/Features";
 import PricingPage from "./pages/Pricing";
+import SecurityPage from "./pages/SecurityPage"
+import CaseStudiesPage from "./pages/CaseStudies";
 
 // ScrollToTop component
 function ScrollToTop() {
@@ -34,6 +36,9 @@ function App() {
         <Route path="/about-us" element={<About />} />
         <Route path="/features" element={<FeaturesPage />} />
         <Route path="/pricing" element={<PricingPage />} />
+        <Route path="/security" element={<SecurityPage />} />
+        <Route path="/case-studies" element={<CaseStudiesPage />} />
+        <Route path="/resources" element={<Resources />} />
       </Routes>
     </Router>
   );

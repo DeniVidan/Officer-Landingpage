@@ -59,3 +59,23 @@ export const homeFaqs = [
       a: "Absolutely. For larger organizations with specific needs, we offer tailored enterprise solutions with custom features, dedicated support, and flexible deployment options. Contact our sales team to discuss your requirements."
     }
   ];
+
+
+  export const securityFaqs = [
+    {
+      q: "How is my data encrypted?",
+      a: "We use AES-256 encryption for all data at rest and TLS 1.3 for data in transit. Encryption keys are managed using a secure key management system with regular rotation."
+    },
+    {
+      q: "Who can access my company's data?",
+      a: "Access to customer data is strictly limited to authorized personnel on a need-to-know basis. All access is logged, monitored, and regularly audited."
+    },
+    {
+      q: "What happens if there is a security incident?",
+      a: "We have a comprehensive incident response plan that includes immediate containment, thorough investigation, and transparent communication with affected customers."
+    },
+    {
+      q: "How often do you conduct security assessments?",
+      a: "We perform internal security assessments quarterly and engage third-party security firms for annual penetration testing and vulnerability assessments."
+    }
+  ];

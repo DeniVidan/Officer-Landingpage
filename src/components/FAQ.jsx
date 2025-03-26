@@ -36,7 +36,7 @@ export default function Faq({
       </div>
 
       <div className="max-w-4xl mx-auto px-4 relative z-10">
-        <h2 className="text-3xl md:text-6xl font-bold mb-4 title-font">{title}</h2>
+        <h2 className="text-3xl md:text-5xl font-bold mb-4 title-font">{title}</h2>
         <p className={`text-${accentColor} mb-12 max-w-2xl mx-auto`}>
           {subtitle}
         </p>

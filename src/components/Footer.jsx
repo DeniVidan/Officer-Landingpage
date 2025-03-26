@@ -1,5 +1,6 @@
 import React from 'react';
 import { ChevronRight, Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -38,14 +39,48 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">Quick Links</h3>
             <ul className="space-y-2">
-              {['Our Platform', 'Solutions', 'Pricing', 'Case Studies', 'Resources'].map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors flex items-center">
-                    <ChevronRight size={14} className="mr-1" />
-                    <span>{item}</span>
-                  </a>
-                </li>
-              ))}
+              <li>
+                <Link to="#" className="text-slate-400 hover:text-blue-400 transition-colors flex items-center">
+                  <ChevronRight size={14} className="mr-1" />
+                  <span>Our Platform</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="#" className="text-slate-400 hover:text-blue-400 transition-colors flex items-center">
+                  <ChevronRight size={14} className="mr-1" />
+                  <span>Solutions</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/pricing" className="text-slate-400 hover:text-blue-400 transition-colors flex items-center">
+                  <ChevronRight size={14} className="mr-1" />
+                  <span>Pricing</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/case-studies" className="text-slate-400 hover:text-blue-400 transition-colors flex items-center">
+                  <ChevronRight size={14} className="mr-1" />
+                  <span>Case Studies</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/resources" className="text-slate-400 hover:text-blue-400 transition-colors flex items-center">
+                  <ChevronRight size={14} className="mr-1" />
+                  <span>Resources</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/security" className="text-slate-400 hover:text-blue-400 transition-colors flex items-center">
+                  <ChevronRight size={14} className="mr-1" />
+                  <span>Security</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/features" className="text-slate-400 hover:text-blue-400 transition-colors flex items-center">
+                  <ChevronRight size={14} className="mr-1" />
+                  <span>Features</span>
+                </Link>
+              </li>
             </ul>
           </div>
 

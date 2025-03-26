@@ -95,7 +95,7 @@ export default function Navbar() {
                     transition={{ duration: 0.2 }}
                   />
 
-                  <span className={`relative z-10 transition-colors duration-300${isLinkActive(item.path) ? "text-white" : "text-gray-300 hover:text-white"}`}>
+                  <span className={`relative z-10 transition-colors duration-300${isLinkActive(item.path) ? "text-white" : "text-gray-300"}`}>
                     {item.label}
                   </span>
                 </Link>
@@ -160,7 +160,7 @@ export default function Navbar() {
                   <span className={`relative transition-all duration-300 ${
                     isLinkActive(item.path) 
                       ? "text-cyan-300 font-bold pl-1" 
-                      : "text-gray-200 group-hover:text-white"
+                      : "text-gray-200"
                   }`}>
                     {item.label}
                   </span>

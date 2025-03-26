@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Footer from '../components/Footer';
 import { Clipboard, BarChart2, ShieldCheck, Puzzle, ChevronRight } from "lucide-react";
+import DemoCTA from '../components/DemoCta';
 
 export default function FeaturesPage() {
   const [activeTab, setActiveTab] = useState('assetTracking');
@@ -340,22 +341,20 @@ export default function FeaturesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-[#003466] relative z-[1]">
-        <div className="container mx-auto px-4 max-w-4xl text-center">
-          <h2 className="title-font text-3xl font-bold text-white mb-6">Ready to streamline your asset management?</h2>
-          <p className="text-font text-blue-100 mb-10">
-            Join hundreds of companies that have transformed their asset management with our platform.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 font-medium py-3 px-8 rounded-lg hover:bg-blue-50 transition duration-300">
-              Start Free Trial
-            </button>
-            <button className="bg-transparent text-white border border-white font-medium py-3 px-8 rounded-lg hover:bg-blue-700 transition duration-300">
-              Schedule Demo
-            </button>
-          </div>
-        </div>
-      </section>
+      <DemoCTA
+      /*  title="Transform Your Asset Management"
+  text="Discover how our platform can streamline your operations and reduce costs."
+  primaryButtonText="Get Started"
+  secondaryButtonText="Learn More"
+  onPrimaryClick={() => {
+    // Handle primary button click
+    console.log('Primary button clicked');
+  }}
+  onSecondaryClick={() => {
+    // Handle secondary button click
+    console.log('Secondary button clicked');
+  }} */
+      />
 
       <Footer />
     </div>

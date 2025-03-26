@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from '../components/Footer';
 import { HandHeart, Scale, LightbulbIcon, Activity, Code, ChevronRight } from "lucide-react"; // Icons
+import DemoCTA from '../components/DemoCta';
 
 export default function About () {
   const values = [
@@ -172,23 +173,20 @@ export default function About () {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-[#003466] w-screen">
-        <div className="container mx-auto px-4 max-w-6xl text-center">
-          <h2 className="text-3xl font-bold text-white mb-6 title-font">Ready to transform your asset management?</h2>
-          <p className="text-blue-100 mb-8 max-w-2xl mx-auto text-font">
-            Schedule a demo today and see how our platform can drive efficiency and security for your organization.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 font-medium py-3 px-8 rounded-lg hover:bg-blue-50 transition duration-300">
-              Request a Demo
-            </button>
-            <button className="bg-transparent text-white border border-white font-medium py-3 px-8 rounded-lg hover:bg-blue-700 transition duration-300">
-              Contact Sales
-            </button>
-          </div>
-        </div>
-        
-      </section>
+      <DemoCTA
+      /*  title="Transform Your Asset Management"
+  text="Discover how our platform can streamline your operations and reduce costs."
+  primaryButtonText="Get Started"
+  secondaryButtonText="Learn More"
+  onPrimaryClick={() => {
+    // Handle primary button click
+    console.log('Primary button clicked');
+  }}
+  onSecondaryClick={() => {
+    // Handle secondary button click
+    console.log('Secondary button clicked');
+  }} */
+      />
       <Footer />  
     </div>
   );
