@@ -103,7 +103,7 @@ export default function CaseStudiesPage() {
 
           {/* Industry Filter - Updated for Responsiveness */}
           <div className="flex justify-center mb-12">
-            <div className="bg-white rounded-lg shadow-md p-2 flex flex-wrap justify-center gap-2">
+            <div className="bg-white/30 backdrop-blur-md rounded-lg shadow-md p-2 flex flex-wrap justify-center gap-2">
               {industries.map((industry) => (
                 <button
                   key={industry}
@@ -111,7 +111,7 @@ export default function CaseStudiesPage() {
                   className={`px-4 py-2 rounded-md text-sm font-medium transition duration-300 whitespace-nowrap ${
                     selectedIndustry === industry
                       ? "bg-blue-600 text-white"
-                      : "text-gray-600 hover:bg-gray-100"
+                      : "text-gray-200 hover:bg-white/10"
                   }`}
                 >
                   {industry}
